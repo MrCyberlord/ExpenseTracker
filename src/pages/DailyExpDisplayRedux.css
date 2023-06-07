@@ -1,0 +1,65 @@
+.light {
+    background-color: #f2f2f2;
+    color: black;
+  }
+  
+  .light .expense-table th {
+    padding: 12px 15px;
+  }
+  
+  .light .edit-button {
+    background-color: #07ff72;
+    border: none;
+    margin-right: 5px;
+  }
+  
+  .light .delete-button {
+    background-color: #57050d;
+    border: none;
+  }
+  
+  .light .total-amount {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .light .premium-button {
+    background-color: #007bff;
+    border: none;
+    margin-top: 10px;
+  }
+  
+  .light .csv-button {
+    background-color: #28a745;
+    border: none;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .dark {
+    background: #222;;
+    color: white;
+  }
+  
+  .dark .expense-table th {
+    
+    padding: 12px 15px;
+  }
+  
+  .dark .edit-button {
+    background-color: #0a7431;
+    border: none;
+    margin-right: 5px;
+  }
+  
+  .dark .delete-button {
+    background-color: #4f0d0d;
+    border: none;
+  }
+  
+  .dark .total-amount {
+    margin-top: 20px;
+    font-size: 24px;
+    
+  }  

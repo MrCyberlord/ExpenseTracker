@@ -1,0 +1,11 @@
+.card {
+  margin-top: 1px;
+  width: 25rem;
+  background: linear-gradient(135deg, rgba(10, 2, 79, 0.83) 10%, rgba(40, 40, 163, 0.92) 70%);
+  padding: 5rem;
+  border-radius: 1rem;
+  border: 0.5vmin solid #270358;
+  overflow: hidden;
+  text-align: center;
+  height: 23rem;
+}
