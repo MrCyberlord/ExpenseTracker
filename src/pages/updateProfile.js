@@ -84,70 +84,28 @@ function UpdateProfile() {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "80vh",
-        backgroundImage:
-          "linear-gradient(135deg, rgba(14, 10, 90, 1) 0%, rgba(53, 53, 243, 1) 70%)",
-        boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-      }}
-    >
+    <div className={classes.container}>
       <div className={classes.card}>
         <form onSubmit={handleUpdateProfile}>
-          <label
-            style={{
-              color: "white",
-              marginBottom: "1rem",
-              textAlign: "left",
-            }}
-          >
+          <label className={classes.label}>
             Name:
             <input
               type="text"
               value={name}
               onChange={handleNameChange}
-              style={{
-                borderRadius: "0.4rem",
-                width: "100%",
-                marginTop: "0.5rem",
-              }}
+              className={classes.input}
             />
           </label>
-          <label
-            style={{
-              color: "white",
-              marginBottom: "1rem",
-              textAlign: "left",
-            }}
-          >
+          <label className={classes.label}>
             Profile Picture URL:
             <input
               type="text"
               value={profilePictureUrl}
               onChange={handleProfilePictureUrlChange}
-              style={{
-                // marginLeft: "1rem",
-                borderRadius: "0.4rem",
-                width: "100%",
-                marginTop: "0.5rem",
-                marginBottom: "0.5rem",
-              }}
+              className={classes.input}
             />
           </label>
-          <button
-            type="submit"
-            style={{
-              backgroundColor: "rgba(10, 100, 136, 0.83)",
-              color: "#fff",
-              padding: "0.5rem 1rem",
-              borderRadius: "0.3rem",
-              cursor: "pointer",
-              marginTop: "0.5rem",
-            }}
-          >
+          <button type="submit" className={classes.button}>
             Update Profile
           </button>
           <p>{message}</p>

@@ -38,15 +38,6 @@ export default function TheNav(props) {
                 Profile Page
               </Nav.Link>
               <Nav.Link
-                href="/verify"
-                style={{
-                  fontWeight: "bold",
-                  color: props.darkMode ? "#f8f9fa" : "#6c757d",
-                }}
-              >
-                Verify Email
-              </Nav.Link>
-              <Nav.Link
                 href="/dailyexp"
                 style={{
                   fontWeight: "bold",

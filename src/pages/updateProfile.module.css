@@ -9,3 +9,34 @@
   text-align: center;
   height: 23rem;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  background-image: linear-gradient(135deg, rgba(14, 10, 90, 1) 0%, rgba(53, 53, 243, 1) 70%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  color: white;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.input {
+  border-radius: 0.4rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  background-color: rgba(10, 100, 136, 0.83);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
