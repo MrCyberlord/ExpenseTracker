@@ -3,11 +3,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { useEffect } from "react";
 import AuthForm from "./Auth/AuthForm";
-import UpdateProfile from "./pages/updateProfile";
 import TheNav from "./pages/theNav";
 import DailyExpRedux from "./pages/DailyExpRedux";
 import { useSelector } from "react-redux";
-import Welcome from "./pages/welcome";
 
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
@@ -29,12 +27,6 @@ function App() {
         <Switch>
           <Route exact path="/">
             <AuthForm />
-          </Route>
-          <Route exact path="/welcome">
-            <Welcome />
-          </Route>
-          <Route path="/profile">
-            <UpdateProfile />
           </Route>
           <Route path="/dailyexp">
             <DailyExpRedux darkMode={isDarkTheme} />

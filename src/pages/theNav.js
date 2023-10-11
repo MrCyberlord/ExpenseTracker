@@ -17,7 +17,7 @@ export default function TheNav(props) {
       >
         <Container style={{ color: props.darkMode ? "#f8f9fa" : "#6c757d" }}>
           <Navbar.Brand
-            href="/welcome"
+            href="/dailyexp"
             style={{
               fontWeight: "bold",
               color: props.darkMode ? "#f8f9fa" : "#6c757d",
@@ -27,26 +27,7 @@ export default function TheNav(props) {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link
-                href="/profile"
-                style={{
-                  fontWeight: "bold",
-                  color: props.darkMode ? "#f8f9fa" : "#6c757d",
-                }}
-              >
-                Profile Page
-              </Nav.Link>
-              <Nav.Link
-                href="/dailyexp"
-                style={{
-                  fontWeight: "bold",
-                  color: props.darkMode ? "#f8f9fa" : "#6c757d",
-                }}
-              >
-                Daily Expenses
-              </Nav.Link>
-            </Nav>
+            <Nav className="me-auto"></Nav>
             <Nav>
               <Nav.Link href="#" style={{ fontWeight: "bold" }}>
                 <Logout />

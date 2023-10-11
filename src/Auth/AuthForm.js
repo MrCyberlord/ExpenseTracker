@@ -83,7 +83,7 @@ const AuthForm = () => {
         );
         console.log("State:", store.getState());
         if (isLogin) {
-          history.replace("/welcome");
+          history.replace("/dailyexp");
         }
       })
       .catch((err) => {

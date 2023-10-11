@@ -180,7 +180,6 @@ export default function DailyExpRedux(props) {
             </Dropdown>
           </Col>
           <Col>
-            {/* <Button variant={props.darkMode ? "light" : "dark"} onClick={handleAddExpense}> */}
             <Button variant="light" onClick={handleAddExpense}>
               Add
             </Button>
