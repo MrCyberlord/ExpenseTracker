@@ -4,16 +4,17 @@ import Navbar from "react-bootstrap/Navbar";
 
 import Logout from "../Auth/Logout";
 import ThemeToggle from "./themeToggle";
-import { useSelector } from "react-redux";
 
 export default function TheNav(props) {
-  const isPremium = useSelector((state) => state.expense.premieum);
   return (
-    <div style={{ backgroundColor: props.darkMode ? "#333" : "#f8f9fa" }}>
+    <div style={{ backgroundColor: props.darkMode ? "#444" : "#f8f9fa" }}>
       <Navbar
-        expand="md"
+        // expand="md"
         variant="light"
-        style={{ borderBottom: "1px solid #dee2e6" }}
+        style={{
+          borderBottom: "1px solid #dee2e6",
+          borderTop: "1px solid #dee2e6",
+        }}
       >
         <Container style={{ color: props.darkMode ? "#f8f9fa" : "#6c757d" }}>
           <Navbar.Brand
@@ -23,22 +24,21 @@ export default function TheNav(props) {
               color: props.darkMode ? "#f8f9fa" : "#6c757d",
             }}
           >
-            Expense Tracker
+            EconoMe
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="navbar-nav" />
-          <Navbar.Collapse id="navbar-nav">
-            <Nav className="me-auto"></Nav>
-            <Nav>
-              <Nav.Link href="#" style={{ fontWeight: "bold" }}>
-                <Logout />
-              </Nav.Link>
-              {isPremium && (
-                <Nav.Link href="#" style={{ fontWeight: "bold" }}>
-                  <ThemeToggle />
-                </Nav.Link>
-              )}
-            </Nav>
-          </Navbar.Collapse>
+          {/* <Navbar.Toggle aria-controls="navbar-nav" />
+          <Navbar.Collapse id="navbar-nav"> */}
+          <Nav className="me-auto"></Nav>
+          <Nav>
+            <Nav.Link href="#" style={{ fontWeight: "bold" }}>
+              <Logout />
+            </Nav.Link>
+
+            <Nav.Link href="#" style={{ fontWeight: "bold" }}>
+              <ThemeToggle />
+            </Nav.Link>
+          </Nav>
+          {/* </Navbar.Collapse> */}
         </Container>
       </Navbar>
     </div>

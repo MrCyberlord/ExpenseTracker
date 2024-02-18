@@ -1,10 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import "./DailyExpDisplayRedux.css";
-import {
-  setExpense,
-  deleteExpenseSlice,
-  setPremieum,
-} from "../redux/ExpReducer";
+import { setExpense, deleteExpenseSlice } from "../redux/ExpReducer";
 import { useSelector, useDispatch } from "react-redux";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
@@ -62,7 +58,6 @@ export default function DailyExpDisplayRedux(props) {
     const csv = [headers, ...rows].map((row) => row.join(",")).join("\n");
     return csv;
   }
-  const isPremieum = useSelector((state) => state.expense.premieum);
 
   return (
     <div
@@ -115,43 +110,29 @@ export default function DailyExpDisplayRedux(props) {
       <div style={{ marginTop: "20px", fontSize: "24px", fontWeight: "bold" }}>
         Total Amount: {totalAmount}
       </div>
-      {totalAmount >= 10000 && (
-        <Button
-          variant="primary"
-          style={{
-            backgroundColor: "#007bff",
-            border: "none",
-            marginTop: "10px",
-          }}
-          onClick={() => dispatch(setPremieum())}
-        >
-          {isPremieum ? "Deactivate" : "Activate Premium"}
-        </Button>
-      )}
-      {isPremieum && (
-        <Button
-          variant="success"
-          style={{
-            backgroundColor: "#28a745",
-            border: "none",
-            marginTop: "10px",
-            marginLeft: "10px",
-          }}
-          onClick={() => {
-            const csv = convertToCSV(cartItems);
-            const link = document.createElement("a");
-            link.setAttribute(
-              "href",
-              `data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`
-            );
-            link.setAttribute("download", "cartItems.csv");
-            document.body.appendChild(link);
-            link.click();
-          }}
-        >
-          Download Cart Items as CSV
-        </Button>
-      )}
+
+      <Button
+        variant="success"
+        style={{
+          backgroundColor: "#28a745",
+          border: "none",
+          marginTop: "10px",
+          marginLeft: "10px",
+        }}
+        onClick={() => {
+          const csv = convertToCSV(cartItems);
+          const link = document.createElement("a");
+          link.setAttribute(
+            "href",
+            `data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`
+          );
+          link.setAttribute("download", "cartItems.csv");
+          document.body.appendChild(link);
+          link.click();
+        }}
+      >
+        Download Expenses.csv
+      </Button>
     </div>
   );
 }

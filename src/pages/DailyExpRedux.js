@@ -168,10 +168,17 @@ export default function DailyExpRedux(props) {
                 className={props.darkMode ? "dropdown-menu-dark" : ""}
               >
                 <Dropdown.Item eventKey="Food">Food</Dropdown.Item>
+                <Dropdown.Item eventKey="Transportation">
+                  Transportation
+                </Dropdown.Item>
+                <Dropdown.Item eventKey="Healthcare">Healthcare</Dropdown.Item>
+                <Dropdown.Item eventKey="Utilities">Utilities</Dropdown.Item>
+                <Dropdown.Item eventKey="Maintenance">
+                  Maintenance
+                </Dropdown.Item>
                 <Dropdown.Item eventKey="Entertainment">
                   Entertainment
                 </Dropdown.Item>
-                <Dropdown.Item eventKey="Groceries">Groceries</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item eventKey="Miscellaneous">
                   Miscellaneous
